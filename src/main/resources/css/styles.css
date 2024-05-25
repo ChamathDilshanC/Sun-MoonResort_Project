@@ -1,0 +1,10 @@
+/* styles.css */
+.jfx-text-field {
+    -jfx-focus-color: #4CAF50;
+    -jfx-unfocus-color: #4CAF50;
+}
+
+.jfx-text-field.error {
+    -jfx-focus-color: #F44336;
+    -jfx-unfocus-color: #F44336;
+}

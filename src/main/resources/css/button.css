@@ -1,0 +1,75 @@
+/* Normal state of the button */
+.gradient-button {
+    -fx-background-color: linear-gradient(to bottom, #45aaf2 0%, #f368e0 100%);
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+    -fx-font-family: 'Times New Roman';
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-scale-x: 1; /* Scale for X axis */
+    -fx-scale-y: 1; /* Scale for Y axis */
+    -fx-cursor: hand; /* Changes cursor to a hand when hovered over the button */
+}
+.gradient-button1 {
+    -fx-background-color: linear-gradient(to bottom, #ff61d2 0%, #fe9090 100%);
+    -fx-background-radius: 5;
+    -fx-text-fill: #000000;
+    -fx-font-size: 12pt;
+    -fx-font-family: 'Times New Roman';
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-scale-x: 1; /* Scale for X axis */
+    -fx-scale-y: 1; /* Scale for Y axis */
+    -fx-cursor: hand; /* Changes cursor to a hand when hovered over the button */
+}
+
+/* Hover state of the button */
+.gradient-button:hover {
+    -fx-scale-x: 1.05; /* Slightly increases the scale of X axis */
+    -fx-scale-y: 1.05; /* Slightly increases the scale of Y axis */
+}
+.gradient-button2 {
+    -fx-background-color: linear-gradient(to bottom, #0652dd 0%, #45aaf2 100%);
+    -fx-alignment: center;
+    -fx-background-color: #0652dd;
+    -fx-border-radius: 8;
+    -fx-border-width: 0;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Phantomsans', sans-serif;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+    -fx-background-radius: 15px;
+}
+
+.gradient-button3 {
+    -fx-background-color: linear-gradient(to bottom, #11998e 0%, #38ef7d 100%);
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+    -fx-font-family: 'Times New Roman';
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-scale-x: 1; /* Scale for X axis */
+    -fx-scale-y: 1; /* Scale for Y axis */
+    -fx-cursor: hand; /* Changes cursor to a hand when hovered over the button */
+}
+.button-63 {
+    -fx-alignment: center;
+    -fx-background-color: #0652dd;
+    -fx-border-radius: 8;
+    -fx-border-width: 0;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Phantomsans', sans-serif;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+    -fx-background-radius: 15px;
+
+}
+

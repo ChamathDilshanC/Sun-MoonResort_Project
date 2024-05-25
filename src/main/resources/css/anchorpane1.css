@@ -1,0 +1,64 @@
+.gradient-button {
+    -fx-background-color: linear-gradient(to top right, #59bcff, #58d0fd);
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 30px; /* Rounds the border if there is one */
+    -fx-background-radius: 15px; /* Rounds the background */
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+.gradient-button1 {
+    -fx-background-color: linear-gradient(to top right, #4bdc95, #57f598);
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 30px; /* Rounds the border if there is one */
+    -fx-background-radius: 15px; /* Rounds the background */
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+.gradient-button2 {
+    -fx-background-color: linear-gradient(to top right, #febd6a, #fdd77d);
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 30px; /* Rounds the border if there is one */
+    -fx-background-radius: 15px; /* Rounds the background */
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+.gradient-button3 {
+    -fx-background-color: linear-gradient(to top right, #ff8f67, #ffc37c);
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 30px; /* Rounds the border if there is one */
+    -fx-background-radius: 15px; /* Rounds the background */
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+
+.gradient-button4 {
+    -fx-background-color: linear-gradient(to top right, #ff8f67, #ffc37c);
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 30px; /* Rounds the border if there is one */
+    -fx-background-radius: 8px; /* Rounds the background */
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+.shadowed-element {
+    -fx-effect: dropshadow(gaussian, rgba(136, 165, 191, 0.48), 16, 0, 6, 2);
+}
+
+.shadowed-element1 {
+   -fx-fill: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.shadowed-element2 {
+    -fx-effect: dropshadow(gaussian, rgba(136, 165, 191, 0.48), 16, 0.0, 0, 0);
+}
+

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="586.0" prefWidth="1129.0" styleClass="rounded-anchor-pane4" stylesheets="@../css/anchorpane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EventFormController">
+   <children>
+      <Label layoutX="14.0" layoutY="12.0" text="Event   Form" textFill="#1923e1" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="12.0">
+         <font>
+            <Font name="Impact" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="66.0" text="Reservation  ID :-" AnchorPane.leftAnchor="24.8" AnchorPane.topAnchor="76.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbEventNames" layoutX="180.0" layoutY="189.0" onAction="#cmbEventNamesOnAction" prefHeight="28.0" prefWidth="300.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="160.0" />
+      <Label layoutX="72.0" layoutY="195.0" text="Event Package :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="301.0" text="Event ID :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="355.0" text="Event Date :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="144.0" text="Customer Phone :-" textFill="#3742fa" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datepikerEventDate" layoutX="135.0" layoutY="352.0" />
+      <Label fx:id="lableEventId" layoutX="120.0" layoutY="301.0" textFill="DODGERBLUE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lableReservationId" layoutX="169.0" layoutY="86.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="414.0" text="Hall Number :-" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="430.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtholenumber" layoutX="149.0" layoutY="421.0" onKeyReleased="#TxtqtyOnKeyReleased" prefHeight="26.0" prefWidth="66.0" AnchorPane.topAnchor="425.0" />
+      <Label layoutX="30.0" layoutY="465.0" text="NumberOfAttendees :-" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="465.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="mOfAttendence" layoutX="219.0" layoutY="461.0" onKeyReleased="#TxtnumofguestOnKeyReleased" prefHeight="26.0" prefWidth="66.0" />
+      <Label layoutX="33.0" layoutY="249.0" text="Package ID  :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablepackageId" layoutX="142.0" layoutY="249.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="445.0" fitWidth="359.0" layoutX="711.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/cute-couple-with-flowers.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="202.0" fitWidth="333.0" layoutX="731.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/3d-rendering-floral-decorated-frame.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="531.0" layoutY="547.0" prefHeight="40.0" prefWidth="332.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#btnPlaceEvent" prefHeight="34.0" prefWidth="168.0" style="-fx-background-color: #34495e;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Place Event" textFill="#00ff5e">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnBackOnAction" prefHeight="33.0" prefWidth="66.0" style="-fx-background-color: #bdc3c7;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Back" textFill="#07ff1b">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label layoutX="27.0" layoutY="391.0" text="Total Amount  :-" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="385.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txttotalamount" layoutX="167.20000000000002" layoutY="401.59999999999997" onKeyReleased="#txtPriceOnKeyReleased" prefHeight="26.0" prefWidth="117.0" AnchorPane.leftAnchor="157.0" AnchorPane.topAnchor="380.0" />
+      <Label layoutX="34.0" layoutY="508.0" text="Payment Method    :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbPaymentMethod" layoutX="192.0" layoutY="503.0" onAction="#cmbPaymentOnAction" prefHeight="28.0" prefWidth="134.0" stylesheets="@../css/combobox.css" />
+      <Label layoutX="32.0" layoutY="538.0" text="Reservation Status    :-" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="540.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbStatus" layoutX="197.0" layoutY="535.0" onAction="#cmbStatusOnAction" prefHeight="28.0" prefWidth="110.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="197.0" AnchorPane.topAnchor="535.0" />
+      <Label layoutX="265.0" layoutY="81.0" text="Payment ID :-" AnchorPane.topAnchor="76.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablenextpaymentid" layoutX="369.0" layoutY="81.0" textFill="#0984e3" AnchorPane.topAnchor="76.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerPhone" layoutX="182.0" layoutY="135.0" onAction="#txtCustomerPhoneOnAction" onKeyReleased="#txtPhoneOnKeyReleased" promptText="Customer Phone" />
+   </children>
+</AnchorPane>

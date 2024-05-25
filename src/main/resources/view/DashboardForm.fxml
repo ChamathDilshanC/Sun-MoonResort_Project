@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1454.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormController">
+   <children>
+      <BorderPane layoutX="41.6" prefHeight="737.0" prefWidth="1434.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane fx:id="paneSlide" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="251.0" stylesheets="@../css/anchorpane.css" BorderPane.alignment="TOP_CENTER">
+               <BorderPane.margin>
+                  <Insets left="-10.0" right="10.0" top="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <ImageView fitHeight="134.0" fitWidth="110.0" layoutX="77.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashboard/HD-wallpaper-cute-girl-art-girls-model-cute-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="6.0" layoutY="181.0" prefHeight="115.0" prefWidth="236.0" style="-fx-background-color: white;" stylesheets="@../css/anchorpane.css">
+                     <styleClass>
+                        <String fx:value="rounded-anchor-pane4" />
+                        <String fx:value="shadowed-element2" />
+                     </styleClass>
+                     <children>
+                        <HBox layoutX="18.0" layoutY="13.0" prefHeight="29.0" prefWidth="200.0">
+                           <children>
+                              <Label text="EMP ID :- ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="labelEmpid" textFill="#004fff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="18.0" layoutY="46.0" prefHeight="29.0" prefWidth="200.0">
+                           <children>
+                              <Label text="POSITION :- ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="labelemppossition" textFill="#ae00ff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="18.0" layoutY="79.0" prefHeight="29.0" prefWidth="200.0">
+                           <children>
+                              <Label text="PHONE :- ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lablephone" textFill="#004fff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <Line endX="100.0" layoutX="126.0" layoutY="322.0" startX="-100.0" />
+                  <VBox layoutX="33.0" layoutY="312.0" prefHeight="338.0" prefWidth="186.0">
+                     <children>
+                        <JFXButton fx:id="reservationbutton" alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#reservationOnAction" prefWidth="140.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="+   Reservations">
+                           <VBox.margin>
+                              <Insets left="23.0" top="20.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#customerOnAction" prefWidth="140.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="+   Customer">
+                           <VBox.margin>
+                              <Insets left="23.0" top="15.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#supplierOnAction" prefWidth="140.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="+   Supplier">
+                           <VBox.margin>
+                              <Insets left="23.0" top="15.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#employeesOnAction" prefWidth="140.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="+   Employees">
+                           <VBox.margin>
+                              <Insets left="23.0" top="15.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#orderMealOnAction" prefWidth="140.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="+   Order Meal">
+                           <VBox.margin>
+                              <Insets left="23.0" top="15.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#InventoryOnAction" prefWidth="140.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="+   Inventory">
+                           <VBox.margin>
+                              <Insets left="23.0" top="15.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#ServiceOnAction" prefWidth="140.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="+   Service">
+                           <VBox.margin>
+                              <Insets left="23.0" top="15.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="22.0" fitWidth="23.0" layoutX="17.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashboard/icons8-male-user-94.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lableusername" layoutX="48.0" layoutY="14.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="rounded-anchor-pane4" />
+                  <String fx:value="shadowed-element2" />
+               </styleClass></AnchorPane>
+         </left>
+         <top>
+            <AnchorPane prefHeight="62.0" prefWidth="1402.0" style="-fx-background-color: WHITE;" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <JFXButton fx:id="btnlogout" layoutX="1284.0" layoutY="16.0" onAction="#logoutOnAction" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #4cd137;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="LOG OUT">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="FIRE" onDragDetected="#logoutOnAction" />
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="58.0" layoutY="9.0" prefHeight="30.0" prefWidth="257.0" styleClass="shadowed-element2" stylesheets="@../css/anchorpane.css" text="SUN  &amp;  MOON RESORT" textFill="#1923e1">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="58.0" layoutY="40.0" text="Location / Branch : Aluthgama">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="52.0" fitWidth="180.0" layoutX="-12.0" layoutY="4.0" onMouseClicked="#dashboardOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashboard/299486158_509594274305999_6293275334226673541_n__1_-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnlogo" layoutX="-6.0" layoutY="4.0" onAction="#dashboardOnAction" prefHeight="52.0" prefWidth="275.0" text=" " />
+                  <HBox layoutX="277.0" layoutY="4.0" prefHeight="55.0" prefWidth="970.0">
+                     <children>
+                        <JFXButton fx:id="byndashboard" onAction="#dashboardOnAction" prefHeight="30.0" prefWidth="145.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Dashboard">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="DASHBOARD" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnReservations" onAction="#btnReservationsOnAction" prefHeight="30.0" prefWidth="145.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Reservations">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="DOLLAR" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnpackages" onAction="#btnpackagesOnAction" prefHeight="30.0" prefWidth="145.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Packages">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="HEART" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btncustomer" onAction="#btnCustomersOnAction" prefHeight="30.0" prefWidth="145.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Customers">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="HEART" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSupplier" onAction="#btnSuppliersOnAction" prefHeight="30.0" prefWidth="145.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Suppliers">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="HOME" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnNewEventOnAction" prefHeight="33.0" prefWidth="119.0" style="-fx-background-color: #1e90ff;" styleClass="button-63" stylesheets="@../css/button.css" text="NEW EVENT" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="6.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane fx:id="FormAnchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#dashboardOnAction" prefHeight="675.0" prefWidth="1130.0" stylesheets="@../css/anchorpane.css" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="20.0" top="15.0" />
+               </BorderPane.margin>
+               <styleClass>
+                  <String fx:value="rounded-anchor-pane4" />
+                  <String fx:value="shadowed-element1" />
+               </styleClass></AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets left="10.0" right="10.0" />
+   </padding>
+</AnchorPane>

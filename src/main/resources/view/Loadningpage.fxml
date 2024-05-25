@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoadingPageController">
+   <children>
+      <ImageView fitHeight="296.0" fitWidth="652.0" layoutX="17.0" layoutY="15.2" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="126.80000000000001" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="14.02099609375" AnchorPane.topAnchor="15.2">
+         <image>
+            <Image url="@../images/login/loading.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="19.0" layoutY="318.0" prefHeight="98.0" prefWidth="614.0" stylesheets="@../css/anchorpane.css">
+         <styleClass>
+            <String fx:value="shadowed-element2" />
+            <String fx:value="rounded-anchor-pane4" />
+         </styleClass>
+         <children>
+            <Label layoutX="126.0" layoutY="24.0" prefHeight="27.0" prefWidth="246.0" text="Sun  &amp; Moon  Resort" AnchorPane.leftAnchor="109.0">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="47.0" prefHeight="27.0" prefWidth="246.0" text="Location :-  Aluthgama" AnchorPane.leftAnchor="109.0">
+               <font>
+                  <Font name="Elephant" size="11.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="74.0" fitWidth="91.0" layoutX="37.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/login/299486158_509594274305999_6293275334226673541_n__1_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="474.0" layoutY="55.0" onAction="#loadLoginForm" prefHeight="31.0" prefWidth="119.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Next" />
+            <Label layoutX="119.0" layoutY="72.0" prefHeight="27.0" prefWidth="105.0" text="Welcome ," textFill="#3742fa">
+               <font>
+                  <Font name="Elephant" size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</AnchorPane>

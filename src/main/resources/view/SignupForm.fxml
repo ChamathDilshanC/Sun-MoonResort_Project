@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: #f0f3fb;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignupFormController">
+   <children>
+      <AnchorPane layoutX="25.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#txtConfirmPasswordOnKeyReleased" prefHeight="414.0" prefWidth="600.0">
+         <stylesheets>
+            <URL value="@../css/anchorpane.css" />
+            <URL value="@../css/anchorpane1.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="shadowed-element2" />
+            <String fx:value="rounded-anchor-pane3" />
+         </styleClass>
+         <children>
+            <ImageView fitHeight="344.0" fitWidth="351.0" layoutX="4.0" layoutY="60.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/login/6be91109-523e-4fe9-9fed-b6d3bfd2316b.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutY="377.0" opacity="0.43" prefHeight="38.0" prefWidth="600.0" styleClass="rounded-anchor-pane5" stylesheets="@../css/anchorpane.css" />
+            <Label layoutX="15.0" layoutY="50.0" text="Sign UP ,">
+               <font>
+                  <Font name="Impact" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="87.0" text="Join Our Community!">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="345.0" layoutY="332.0" mnemonicParsing="false" onAction="#CreateaccountOnAction" prefHeight="30.0" prefWidth="202.0" styleClass="button-63" stylesheets="@../css/button.css" text="Create Account" />
+            <ImageView fitHeight="365.0" fitWidth="249.0" layoutX="44.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/login/3aea2352-dd63-4c97-8b78-6ffa5f7619d6.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="TxtUserId" focusColor="#3742fa" labelFloat="true" layoutX="344.0" layoutY="60.0" onKeyReleased="#txtUserIdOnKeyReleased" prefHeight="26.0" prefWidth="202.0" promptText="UserID" />
+            <JFXTextField fx:id="TxtEmpId" focusColor="#3742fa" labelFloat="true" layoutX="345.0" layoutY="109.0" onKeyReleased="#txtEmpIdOnKeyReleased" prefHeight="26.0" prefWidth="202.0" promptText="EmployeeID" />
+            <JFXTextField fx:id="TxtUsername" focusColor="#3742fa" labelFloat="true" layoutX="345.0" layoutY="165.0" onKeyReleased="#txtUserNameOnKeyReleased" prefHeight="26.0" prefWidth="202.0" promptText="Username" />
+            <JFXTextField fx:id="TxtPassword" focusColor="#3742fa" labelFloat="true" layoutX="345.0" layoutY="216.0" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="26.0" prefWidth="202.0" promptText="Password" />
+            <JFXTextField fx:id="txtConfirmPassword" focusColor="#3742fa" labelFloat="true" layoutX="344.0" layoutY="272.0" prefHeight="26.0" prefWidth="202.0" promptText="Confirm Password" />
+            <JFXButton layoutX="3.0" layoutY="12.0" onAction="#BackbtnOnAction" prefHeight="26.0" prefWidth="72.0" styleClass="button-63" stylesheets="@../css/button.css" text="Back">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/forms/back_10238211.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

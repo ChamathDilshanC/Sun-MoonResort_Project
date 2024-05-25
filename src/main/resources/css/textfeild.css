@@ -1,0 +1,14 @@
+/* Default style for TextField */
+.text-field {
+    -fx-background-color: transparent, #f0f3fb, linear-gradient(to bottom, transparent 97%, #d3d3d3 97%);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0;
+    -fx-padding: 10 7 10 7; /* Adjust the padding to align text vertically */
+}
+
+/* Style for TextField when it is focused (clicked) */
+.text-field:focused {
+    -fx-background-color: transparent, #f0f3fb, linear-gradient(to bottom, rgba(239, 22, 22, 0) 97%, #3498db 97%);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0;
+}

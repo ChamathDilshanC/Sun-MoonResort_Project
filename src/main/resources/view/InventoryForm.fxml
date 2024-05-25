@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="638.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.InventoryFormController">
+   <children>
+      <Label layoutX="14.0" layoutY="12.0" text="Inventory   Form" textFill="#1923e1" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="12.0">
+         <font>
+            <Font name="Impact" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="120.0" text="Supplier ID :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbsupplierId" layoutX="135.0" layoutY="117.0" onAction="#cmbSupplierOnAction" prefHeight="28.0" prefWidth="140.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="135.0" />
+      <JFXButton buttonType="RAISED" layoutX="299.0" layoutY="114.0" onAction="#btnNewSupplierOnAction" prefHeight="34.0" prefWidth="140.0" style="-fx-background-color: #4cd137;" styleClass="button-63" stylesheets="@../css/button.css" text="NEW SUPPLIER" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="6.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-supplier-94.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="520.0" layoutY="118.0" text="Name :-" AnchorPane.leftAnchor="520.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="171.0" text="Inventory ID :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="218.0" text="Meal ID :-">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.8" layoutY="297.0" text="Supply Quantity :-" AnchorPane.leftAnchor="24.8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="337.0" text="Delivery Date :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="218.0" text="Name :-" AnchorPane.leftAnchor="260.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="841.0" layoutY="348.0" onAction="#btnAddToCartOnAction" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #3498db;" styleClass="button-63" stylesheets="@../css/button1.1.css" text=" Add to cart" textFill="WHITE" AnchorPane.leftAnchor="840.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-cart-94.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="716.0" layoutY="587.2" onAction="#btnBackOnAction" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #bdc3c7;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="  Back" textFill="#07ff1b" AnchorPane.topAnchor="587.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-exit-1500.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="867.0" layoutY="587.2" onAction="#btnPlacesupply" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #34495e;" styleClass="button-63" stylesheets="@../css/button1.1.css" text=" Place Supply" textFill="#00ff5e" AnchorPane.leftAnchor="840.0" AnchorPane.topAnchor="587.2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-check-mark-420.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbinventoryid" layoutX="132.0" layoutY="167.0" onAction="#cmbinventoryidonAction" prefHeight="26.0" prefWidth="94.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="167.0" />
+      <TableView fx:id="tableinventorycart" layoutX="86.4" layoutY="395.0" prefHeight="172.0" prefWidth="949.0" AnchorPane.leftAnchor="86.4" AnchorPane.rightAnchor="94.40000000000009">
+         <columns>
+            <TableColumn fx:id="colInventoryID" prefWidth="141.60000228881836" text="InventoryID " />
+            <TableColumn fx:id="colSupplierID" prefWidth="103.20002746582031" text="SupplierID" />
+            <TableColumn fx:id="colSupplyQuantity" prefWidth="131.2000274658203" text="SupplyQuantity" />
+            <TableColumn fx:id="colDeliveryDate" prefWidth="149.5999755859375" text="DeliveryDate" />
+            <TableColumn fx:id="colPricePerUnit" minWidth="0.0" prefWidth="113.5999755859375" text="PricePerUnit" />
+            <TableColumn fx:id="colTotalPrice" minWidth="0.0" prefWidth="123.20001220703125" text="Total Price" />
+            <TableColumn fx:id="colAction" minWidth="0.0" prefWidth="182.5999755859375" text="Action" />
+         </columns>
+      </TableView>
+      <Label layoutX="519.0" layoutY="148.0" text="Email  :-" AnchorPane.leftAnchor="520.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="504.0" layoutY="587.2" onAction="#InventoryTableOnAction" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #2f3542;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Inventory Table" textFill="#07ff1b" AnchorPane.topAnchor="587.2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-event-accepted-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="-22.0" layoutY="72.0" text="Supplier Phone :-" textFill="#3742fa" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="492.0" layoutY="218.0" text="Available Qty :-" AnchorPane.leftAnchor="492.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="509.0" layoutY="287.0" text="Minimum Stock Level :-" AnchorPane.leftAnchor="492.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.4" layoutY="254.0" text="Ingredients :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datepikerDeliverydate" layoutX="140.0" layoutY="334.0" stylesheets="@../css/datepiker.css" />
+      <Label layoutX="362.0" layoutY="335.0" text="Price Per Unit :-">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="136.0" fitWidth="186.0" layoutX="762.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/new/worker-picking-box.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="202.0" fitWidth="304.0" layoutX="867.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/199f3ca8-7a5d-4628-8273-a326ffcc81aa.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="112.0" layoutX="903.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/80c239e3-d314-4352-b6b5-78eea013eb80(1).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelSupName" layoutX="587.0" layoutY="118.0" textFill="DODGERBLUE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="labelSupEmail" layoutX="586.0" layoutY="148.0" textFill="DODGERBLUE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="labelMealId" layoutX="104.0" layoutY="220.0" textFill="DODGERBLUE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lableMealName" layoutX="329.0" layoutY="220.0" textFill="DODGERBLUE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lableAvaQty" layoutX="613.0" layoutY="220.0" textFill="DODGERBLUE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lableIngredients" layoutX="129.0" layoutY="256.0" textFill="DODGERBLUE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="lableMinimumStockLevel" layoutX="674.0" layoutY="290.0" textFill="DODGERBLUE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <JFXTextField fx:id="txtsupQty" layoutX="159.0" layoutY="295.0" onKeyReleased="#TxtqtyOnKeyReleased" prefHeight="26.0" prefWidth="78.0" />
+      <JFXTextField fx:id="txtPricePerunit" layoutX="479.0" layoutY="333.0" onKeyReleased="#txtPriceOnKeyReleased" />
+      <JFXTextField fx:id="txtsupplierphone" layoutX="159.0" layoutY="70.0" onAction="#handleSupplierPhoneAction" onKeyReleased="#txtPhoneOnKeyReleased" />
+      <JFXButton buttonType="RAISED" layoutX="294.0" layoutY="587.0" onAction="#PrintBillOnAction" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #2f3542;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="  Print Bill" textFill="#07ff1b">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/forms/icons8-purchase-order.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

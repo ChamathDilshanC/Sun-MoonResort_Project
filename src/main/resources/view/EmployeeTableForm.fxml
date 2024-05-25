@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="638.0" prefWidth="1129.0" stylesheets="@../css/anchorpane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeTableFormController">
+   <children>
+      <Label layoutX="134.0" layoutY="71.0" text="Employees   In   Sun   &amp;   Moon   Resort" textFill="#1923e1" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="61.0">
+         <font>
+            <Font name="Impact" size="23.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="144.0" fitWidth="171.0" layoutX="931.1999999999999" layoutY="3.2" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="921.0" AnchorPane.topAnchor="-7.0">
+         <image>
+            <Image url="@../images/forms/6988d1bb-4e94-4a7b-804b-bee0b520a5b4.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableEmployees" layoutX="46.8" layoutY="147.0" prefHeight="491.0" prefWidth="1083.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="137.0">
+         <columns>
+            <TableColumn fx:id="colEmployeeID" prefWidth="77.59997022151947" text="EmployeeID" />
+            <TableColumn fx:id="colFirstName" minWidth="0.0" prefWidth="85.60001373291016" text="FirstName" />
+            <TableColumn fx:id="colLastName" prefWidth="84.80006408691406" text="LastName" />
+            <TableColumn fx:id="colPosition" prefWidth="136.26666259765625" text="Position" />
+            <TableColumn fx:id="colEmail" prefWidth="226.66659545898438" text="Email" />
+            <TableColumn fx:id="colPhone" prefWidth="98.1334228515625" text="Phone" />
+            <TableColumn fx:id="colHireDate" prefWidth="119.20001220703125" text="HireDate" />
+            <TableColumn fx:id="colSalary" minWidth="0.0" prefWidth="94.933349609375" text="Salary" />
+            <TableColumn fx:id="colDepartment" prefWidth="144.2667236328125" text="Department" />
+         </columns>
+      </TableView>
+   </children>
+   <styleClass>
+      <String fx:value="rounded-anchor-pane4" />
+      <String fx:value="shadowed-element1" />
+   </styleClass>
+</AnchorPane>

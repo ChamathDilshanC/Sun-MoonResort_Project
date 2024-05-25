@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="638.0" prefWidth="1129.0" stylesheets="@../css/anchorpane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PackageTableFormController">
+   <children>
+      <Label layoutX="134.0" layoutY="71.0" text="Packages   In   Sun   &amp;   Moon   Resort" textFill="#1923e1" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="61.0">
+         <font>
+            <Font name="Impact" size="23.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="107.0" fitWidth="160.0" layoutX="910.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="910.0" AnchorPane.topAnchor="19.0">
+         <image>
+            <Image url="@../images/forms/dc9e981f-7691-48c0-b8a5-17a799e4caf3.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tablepackage" layoutX="46.8" layoutY="147.0" prefHeight="491.0" prefWidth="1083.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="137.0">
+         <columns>
+            <TableColumn fx:id="colPackageID" prefWidth="141.86665534973145" text="PackageID" />
+            <TableColumn fx:id="colCustomerID" minWidth="0.0" prefWidth="0.0" text="CustomerID" />
+            <TableColumn fx:id="colName" prefWidth="387.19996643066406" text="Name" />
+            <TableColumn fx:id="colPrice" prefWidth="107.4666748046875" text="Price" />
+            <TableColumn fx:id="colServicesIncluded" prefWidth="450.5999755859375" text="ServicesIncluded" />
+         </columns>
+      </TableView>
+   </children>
+   <styleClass>
+      <String fx:value="rounded-anchor-pane4" />
+      <String fx:value="shadowed-element1" />
+   </styleClass>
+</AnchorPane>

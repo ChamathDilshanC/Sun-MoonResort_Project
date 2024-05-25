@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EmployeeService" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0c730327-fe30-4f4d-a0e1-ab36a3673090">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (11)"/>
+	<parameter name="EmployeeID" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    *
+FROM
+    sm_resort.employee e
+LEFT JOIN
+    sm_resort.employee_service_info esi ON e.EmployeeID = esi.EmployeeID
+LEFT JOIN
+    sm_resort.service s ON esi.ServiceID = s.ServiceID
+WHERE
+    e.EmployeeID =   $P{EmployeeID}
+]]>
+	</queryString>
+	<field name="EmployeeID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EmployeeID"/>
+		<property name="com.jaspersoft.studio.field.label" value="EmployeeID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="FirstName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="FirstName"/>
+		<property name="com.jaspersoft.studio.field.label" value="FirstName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="LastName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LastName"/>
+		<property name="com.jaspersoft.studio.field.label" value="LastName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="Position" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Position"/>
+		<property name="com.jaspersoft.studio.field.label" value="Position"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Email"/>
+		<property name="com.jaspersoft.studio.field.label" value="Email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="Phone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Phone"/>
+		<property name="com.jaspersoft.studio.field.label" value="Phone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="HireDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="HireDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="HireDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="Salary" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="Salary"/>
+		<property name="com.jaspersoft.studio.field.label" value="Salary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="Department" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Department"/>
+		<property name="com.jaspersoft.studio.field.label" value="Department"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="COLUMN_10" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EmployeeID"/>
+		<property name="com.jaspersoft.studio.field.label" value="EmployeeID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee_service_info"/>
+	</field>
+	<field name="ServiceID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ServiceID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ServiceID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee_service_info"/>
+	</field>
+	<field name="HoursAllocated" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="HoursAllocated"/>
+		<property name="com.jaspersoft.studio.field.label" value="HoursAllocated"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee_service_info"/>
+	</field>
+	<field name="ServiceDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="ServiceDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="ServiceDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee_service_info"/>
+	</field>
+	<field name="TotalPayment" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="TotalPayment"/>
+		<property name="com.jaspersoft.studio.field.label" value="TotalPayment"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee_service_info"/>
+	</field>
+	<field name="COLUMN_15" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ServiceID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ServiceID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="Price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="Price"/>
+		<property name="com.jaspersoft.studio.field.label" value="Price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="Availability" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Availability"/>
+		<property name="com.jaspersoft.studio.field.label" value="Availability"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<group name="EmployeeID">
+		<groupExpression><![CDATA[$F{EmployeeID}]]></groupExpression>
+	</group>
+	<group name="FirstName">
+		<groupExpression><![CDATA[$F{FirstName}]]></groupExpression>
+	</group>
+	<group name="LastName">
+		<groupExpression><![CDATA[$F{LastName}]]></groupExpression>
+	</group>
+	<group name="Position">
+		<groupExpression><![CDATA[$F{Position}]]></groupExpression>
+	</group>
+	<group name="Email">
+		<groupExpression><![CDATA[$F{Email}]]></groupExpression>
+	</group>
+	<group name="Phone">
+		<groupExpression><![CDATA[$F{Phone}]]></groupExpression>
+	</group>
+	<group name="HireDate">
+		<groupExpression><![CDATA[$F{HireDate}]]></groupExpression>
+	</group>
+	<group name="Salary">
+		<groupExpression><![CDATA[$F{Salary}]]></groupExpression>
+	</group>
+	<group name="Department">
+		<groupExpression><![CDATA[$F{Department}]]></groupExpression>
+	</group>
+	<group name="COLUMN_10">
+		<groupExpression><![CDATA[$F{COLUMN_10}]]></groupExpression>
+	</group>
+	<group name="ServiceID">
+		<groupExpression><![CDATA[$F{ServiceID}]]></groupExpression>
+	</group>
+	<group name="HoursAllocated">
+		<groupExpression><![CDATA[$F{HoursAllocated}]]></groupExpression>
+	</group>
+	<group name="ServiceDate">
+		<groupExpression><![CDATA[$F{ServiceDate}]]></groupExpression>
+	</group>
+	<group name="TotalPayment">
+		<groupExpression><![CDATA[$F{TotalPayment}]]></groupExpression>
+	</group>
+	<group name="COLUMN_15">
+		<groupExpression><![CDATA[$F{COLUMN_15}]]></groupExpression>
+	</group>
+	<group name="Name">
+		<groupExpression><![CDATA[$F{Name}]]></groupExpression>
+	</group>
+	<group name="Description">
+		<groupExpression><![CDATA[$F{Description}]]></groupExpression>
+	</group>
+	<group name="Price">
+		<groupExpression><![CDATA[$F{Price}]]></groupExpression>
+	</group>
+	<group name="Availability">
+		<groupExpression><![CDATA[$F{Availability}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<image>
+				<reportElement x="30" y="0" width="50" height="50" uuid="43c5eab8-c21d-4994-b552-a7841f07a60b"/>
+				<imageExpression><![CDATA["C:/Users/dilsh/Desktop/SUN & MOON RESORT PROJECT/S_Moon_Resort1/src/main/resources/images/login/299486158_509594274305999_6293275334226673541_n__1_-removebg-preview.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="112" y="30" width="330" height="30" uuid="2985eca3-36c9-433d-bbdd-84f417bbeecf"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[104/8 Galle Rd,Kaluwamodara,Aluthgama,Srilanka.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="187" height="47" forecolor="#2F18C7" uuid="07af77e8-59b7-49ad-a4bc-5bd51304f4a6"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Sun & Moon Resort ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="60" width="100" height="30" uuid="15e3315b-59eb-4f29-b985-4838912740c7"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[070 274 7123]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="115" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="e48e11b9-b372-4cf9-80a5-2f5a8cf02ee2"/>
+				<textFieldExpression><![CDATA[$F{EmployeeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="40" width="100" height="30" uuid="3e37c074-266b-494f-92d3-56a5c794091a"/>
+				<textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="40" width="100" height="30" uuid="8b3f20bc-116b-496a-b754-157aeb895085"/>
+				<textFieldExpression><![CDATA[$F{Position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="80" width="108" height="30" uuid="2fcbf1c2-5f94-4bf4-98c5-a1987ae2c875"/>
+				<textFieldExpression><![CDATA[$F{Phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="79" width="100" height="30" uuid="0634d96e-8caa-4d26-8755-874344e4c806"/>
+				<textFieldExpression><![CDATA[$F{Department}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="90" height="30" uuid="62535b3c-3743-4d79-95f5-c9986591c127"/>
+				<text><![CDATA[Employee Name :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="60" height="30" uuid="73d5e421-fe40-46a8-80d3-43ab3e02c4fc"/>
+				<text><![CDATA[Phone :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="393" y="80" width="60" height="30" uuid="376a3478-a005-408f-91bf-9c2b8d43dbe5"/>
+				<text><![CDATA[Department :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="40" width="59" height="30" uuid="c7e50113-7324-4a0d-a82b-5fdf8868700d"/>
+				<text><![CDATA[Possition :-]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="231" y="10" width="100" height="30" uuid="41f60a0f-a481-4dc8-bbff-6180c9b04a50">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a0efc42-294a-4d15-8268-6e1a418e1a61"/>
+				</reportElement>
+				<text><![CDATA[HoursAllocated]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="10" width="100" height="30" uuid="e23ad91d-968c-432a-8c6c-50dffde21588">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e3e7eaa-4c32-4975-ac54-3d2eb165e8e6"/>
+				</reportElement>
+				<text><![CDATA[ServiceID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="10" width="100" height="30" uuid="d61d343f-a77f-4ef4-a212-d4b95f676127">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e4be6f34-3079-434b-8c94-e8c0902a696b"/>
+				</reportElement>
+				<text><![CDATA[TotalPayment]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="231" y="0" width="100" height="30" uuid="a204b142-4439-4143-b766-1d9f7445fa4a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a0efc42-294a-4d15-8268-6e1a418e1a61"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{HoursAllocated}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="30" uuid="031f2a2c-d981-4441-87f7-42b509b52ba2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e3e7eaa-4c32-4975-ac54-3d2eb165e8e6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ServiceID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="bad1391c-fa5a-48e9-ba8d-eaed8b4651ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e4be6f34-3079-434b-8c94-e8c0902a696b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{TotalPayment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement x="192" y="0" width="170" height="30" uuid="e0aa7ed4-b786-438b-817e-57fe4add6152"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[THANK YOU FOR  SERVICE !!!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="30" width="78" height="30" forecolor="#2F18C7" uuid="e43d370d-ad8c-4f40-8a49-600098cd4ee4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[STAY HAPPY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="47" width="510" height="30" uuid="8af393fb-1554-4a29-a6ba-92fe2cdd8941"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Facing the Bentota river and walking distance to the beach. A 60-minute drive from Colombo. Packed with excitement and comfort. Quality, Reliability, and Luxury are our main priorities.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

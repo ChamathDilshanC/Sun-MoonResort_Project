@@ -1,0 +1,17 @@
+.button {
+    -fx-background-color: #ffffff; /* default non-focused background */
+    -fx-text-fill: #0dcaf0; /* default text color */
+    -fx-padding: 5px; /* example padding */
+    -fx-border-color: #ffffff; /* example border color */
+    -fx-background-radius: 0; /* example border radius */
+    -fx-border-radius: 0;
+    /* other default styles */
+}
+
+.button:focused {
+    -fx-text-fill: white; /* default text color */
+    -fx-text-fill: white; /* text color for focused state, if different */
+    /* other styles for focused state */
+}
+
+

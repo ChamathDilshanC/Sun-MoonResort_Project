@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="672.0" prefWidth="1129.0" stylesheets="@../css/anchorpane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SupplierFormController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Supplier   Form" textFill="#1923e1" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="24.0">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="234.0" fitWidth="354.0" layoutX="451.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/942cf4a1-a00f-409f-86f8-7951318267f3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="224.0" fitWidth="246.0" layoutX="611.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/4ee75d8f-c2f8-49c5-8eba-5e16d1df05bf.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="242.8" layoutY="623.6" prefHeight="54.0" prefWidth="658.0" AnchorPane.leftAnchor="233.0" AnchorPane.topAnchor="593.0">
+         <children>
+            <JFXButton fx:id="btnsave" onAction="#btnsaveOnAction" prefHeight="31.0" prefWidth="101.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Save">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnupdate" onAction="#btnupdateOnAction" prefHeight="31.0" prefWidth="102.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Update">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btndelete" onAction="#btndeleteOnAction" prefHeight="31.0" prefWidth="102.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Delete">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnclear" onAction="#btnclearOnAction" prefHeight="31.0" prefWidth="102.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Clear">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnSupplierTable" onAction="#btnSupplierTableOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #7d5fff;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Supplier Table">
+               <HBox.margin>
+                  <Insets left="30.0" right="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXTextField fx:id="txtSupplierID" focusColor="#3742fa" labelFloat="true" layoutX="55.0" layoutY="210.0" onKeyReleased="#txtSupIdOnKeyReleased" prefHeight="26.0" prefWidth="238.0" promptText="SupplierID" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="210.0" />
+      <JFXTextField fx:id="txtName" focusColor="#3742fa" labelFloat="true" layoutX="55.0" layoutY="290.0" onKeyReleased="#txtSupNameOnKeyReleased" prefHeight="26.0" prefWidth="238.0" promptText="Name" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="280.0" />
+      <JFXTextField fx:id="txtPostalCode" focusColor="#3742fa" labelFloat="true" layoutX="55.0" layoutY="370.0" onKeyReleased="#txtPostalCodeOnKeyReleased" prefHeight="26.0" prefWidth="238.0" promptText="PostalCode" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="350.0" />
+      <JFXTextField fx:id="txtEmailAddress" focusColor="#3742fa" labelFloat="true" layoutX="60.0" layoutY="439.0" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="26.0" prefWidth="238.0" promptText="EmailAddress" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="420.0" />
+      <JFXTextField fx:id="txtSearchContactNumber" focusColor="#3742fa" layoutX="61.0" layoutY="149.0" onKeyReleased="#txtsearchPhoneOnKeyReleased" prefHeight="26.0" prefWidth="238.0" promptText="Search By ContactNumber" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="120.0" />
+      <JFXTextField fx:id="txtContactNumber" focusColor="#3742fa" labelFloat="true" layoutX="55.0" layoutY="513.0" onAction="#contactnumOnAction" onKeyReleased="#txtPhoneOnKeyReleased" prefHeight="26.0" prefWidth="238.0" promptText="ContactNumber" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="490.0" />
+      <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="21.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/icons8-search-1--unscreen.gif" />
+         </image>
+      </ImageView>
+   </children>
+   <styleClass>
+      <String fx:value="rounded-anchor-pane4" />
+      <String fx:value="shadowed-element1" />
+   </styleClass>
+</AnchorPane>

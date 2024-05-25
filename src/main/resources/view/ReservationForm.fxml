@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="638.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ReservationFormController">
+   <children>
+      <Label layoutX="14.0" layoutY="12.0" text="Reservation Form" textFill="#1923e1" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="12.0">
+         <font>
+            <Font name="Impact" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="71.0" text="Reservation ID :-" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="71.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="120.0" text="Customer ID :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCustomerId" layoutX="135.0" layoutY="117.0" onAction="#cmbCustomerOnAction" prefHeight="28.0" prefWidth="140.0" stylesheets="@../css/combobox.css" />
+      <JFXButton buttonType="RAISED" layoutX="299.0" layoutY="114.0" onAction="#btnNewCustomerOnAction" prefHeight="33.0" prefWidth="119.0" style="-fx-background-color: #4cd137;" styleClass="button-63" stylesheets="@../css/button.css" text="NEW CUSTOMER" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="6.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="520.0" layoutY="60.0" text="Reservation Date :-" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="71.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="118.0" text="First Name :-" AnchorPane.leftAnchor="520.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="178.0" text="Package ID :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="178.0" text="Name :-">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.4" layoutY="234.0" text="Service ID :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="527.0" layoutY="229.0" text="Service Price :-" AnchorPane.leftAnchor="538.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="538.0" layoutY="178.0" text="Package Price :-" AnchorPane.leftAnchor="538.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="931.0" layoutY="365.0" onAction="#btnAddToCartOnAction" prefHeight="34.0" prefWidth="168.0" style="-fx-background-color: #3498db;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="      Add to cart" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-cart-94.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="14.4" layoutY="285.0" text="CheckIn Date :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.4" layoutY="325.0" text="CheckOut Date :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="checkindatepiker" layoutX="158.0" layoutY="283.0" onAction="#checkindatepikerOnAction" stylesheets="@../css/datepiker.css" />
+      <DatePicker fx:id="checkoutdatepiker" layoutX="159.0" layoutY="323.0" onAction="#checkoutdatepikerOnAction" stylesheets="@../css/datepiker.css" />
+      <Label layoutX="14.4" layoutY="375.0" text="Number of Guests :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="391.0" layoutY="286.0" text="Duration :-" AnchorPane.leftAnchor="391.0" AnchorPane.topAnchor="286.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablereservationid" layoutX="154.0" layoutY="71.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="375.0" text="Reservation Status :-">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbStatus" layoutX="462.2" layoutY="370.0" onAction="#cmbStatusOnAction" prefHeight="28.0" prefWidth="110.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="462.2" />
+      <JFXComboBox fx:id="cmbpackageid" layoutX="122.0" layoutY="177.0" onAction="#cmbpackageidOnAction" prefHeight="26.0" prefWidth="94.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="122.0" AnchorPane.topAnchor="177.0" />
+      <JFXComboBox fx:id="cmbServiceId" layoutX="116.0" layoutY="226.0" onAction="#cmbserviceidOnAction" prefHeight="26.0" prefWidth="94.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="122.0" />
+      <Label fx:id="lablepackageprice" layoutX="661.0" layoutY="180.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lableServicePrice" layoutX="660.0" layoutY="229.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablepackagename" layoutX="323.0" layoutY="179.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablereservationdate" layoutX="674.0" layoutY="60.0" textFill="#0984e3" AnchorPane.topAnchor="71.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblreservationcart" layoutX="14.0" layoutY="418.0" prefHeight="172.0" prefWidth="1088.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="27.0">
+         <columns>
+            <TableColumn fx:id="colReservationId" prefWidth="141.60000228881836" text="ReservationID" />
+            <TableColumn fx:id="colCustomerId" prefWidth="103.20002746582031" text="CustomerID" />
+            <TableColumn fx:id="colPackageId" prefWidth="114.39997863769531" text="PackageID" />
+            <TableColumn fx:id="colPackagePrice" prefWidth="108.0" text="PackagePrice" />
+            <TableColumn fx:id="colServiceId" minWidth="0.0" prefWidth="106.39996337890625" text="ServiceID" />
+            <TableColumn fx:id="colServicePrice" minWidth="0.0" prefWidth="115.2000732421875" text="ServicePrice" />
+            <TableColumn fx:id="colRoomID" minWidth="0.0" prefWidth="108.79998779296875" text="RoomID" />
+            <TableColumn fx:id="colTotalPrice" minWidth="0.0" prefWidth="132.79986572265625" text="Total Price" />
+            <TableColumn fx:id="colAction" minWidth="0.0" prefWidth="144.00006103515625" text="Action" />
+         </columns>
+      </TableView>
+      <Label fx:id="lablecustomerfristname" layoutX="623.0" layoutY="118.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="721.0" layoutY="120.0" text="Last Name :-">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablecustomerlastname" layoutX="818.0" layoutY="120.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="913.0" layoutY="120.0" text="Nationality :-">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablecusNationality" layoutX="1013.0" layoutY="120.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelduration" layoutX="478.0" layoutY="286.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbNumGuest" layoutX="170.0" layoutY="372.0" onAction="#cmbnumguestOnAction" prefHeight="28.0" prefWidth="80.0" stylesheets="@../css/combobox.css" />
+      <Label layoutX="735.0" layoutY="267.0" text="Payment Method :-" AnchorPane.topAnchor="286.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbPaymentMethod" layoutX="890.0" layoutY="283.2" onAction="#cmbPaymentOnAction" prefHeight="28.0" prefWidth="134.0" stylesheets="@../css/combobox.css" AnchorPane.topAnchor="283.0" />
+      <Label layoutX="404.0" layoutY="328.0" text="Room ID :-" AnchorPane.leftAnchor="391.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbroomid" layoutX="472.0" layoutY="323.0" onAction="#cmbroomidOnAction" prefHeight="26.0" prefWidth="94.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="472.0" />
+      <Label layoutX="633.0" layoutY="329.0" text="Room Availability :-">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="roomavailability" layoutX="778.0" layoutY="331.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="255.0" layoutY="71.0" text="Payment ID :-" AnchorPane.topAnchor="71.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablenextpaymentid" layoutX="359.0" layoutY="71.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="391.0" layoutY="596.0" onAction="#ReservationTableOnAction" prefHeight="32.0" prefWidth="186.0" style="-fx-background-color: #2f3542;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="  Reservation Table" textFill="#07ff1b" AnchorPane.topAnchor="596.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-event-accepted-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="796.0" layoutY="71.0" text="Customer Phone :-" textFill="#3742fa">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="607.0" text="Net Total :-" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablenettotal" layoutX="99.0" layoutY="607.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="161.0" fitWidth="270.0" layoutX="802.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/new/gen-z-suffering-hangover.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="786.6" layoutY="595.2" onAction="#btnBackOnAction" prefHeight="34.0" prefWidth="104.0" style="-fx-background-color: #bdc3c7;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Back" textFill="#07ff1b" AnchorPane.leftAnchor="786.6" AnchorPane.topAnchor="595.2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-exit-1500.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="908.0" layoutY="595.2" onAction="#btnPlaceReservationOnAction" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #34495e;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="  Place Reservation" textFill="#00ff5e" AnchorPane.topAnchor="595.2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-check-mark-420.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="txtCustomerphone" layoutX="938.0" layoutY="66.0" onKeyReleased="#txtPhoneOnKeyReleased" promptText="Customer Phone" />
+      <JFXButton buttonType="RAISED" layoutX="589.0" layoutY="595.0" onAction="#PrintBillOnAction" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #2f3542;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="  Print Bill" textFill="#07ff1b">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/forms/icons8-purchase-order.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="523.0" layoutY="151.0" text="Email :-" AnchorPane.leftAnchor="520.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lablecustEmail" layoutX="580.0" layoutY="150.0" textFill="#0984e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="194.0" layoutY="595.0" onAction="#SendEmailOnAction" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #2f3542;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="  Send E-mail" textFill="#07ff1b">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/forms/gmail_5968534.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

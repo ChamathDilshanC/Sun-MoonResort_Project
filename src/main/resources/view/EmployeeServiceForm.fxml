@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="638.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeServiceFormController">
+   <children>
+      <Label layoutX="14.0" layoutY="12.0" text="Employee Service Form" textFill="#1923e1" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="12.0">
+         <font>
+            <Font name="Impact" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="166.0" text="Service Name :-" AnchorPane.leftAnchor="345.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lableMealName" layoutX="25.0" layoutY="166.0" text="Service ID :-" AnchorPane.leftAnchor="24.8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="877.0" layoutY="356.0" onAction="#btnAddToCartOnAction" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #3498db;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="  Add Service cart" textFill="WHITE" AnchorPane.leftAnchor="877.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-cart-94.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="760.0" layoutY="592.8" onAction="#btnBackOnAction" prefHeight="34.0" prefWidth="104.0" style="-fx-background-color: #bdc3c7;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Back" textFill="#07ff1b" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="590.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-exit-1500.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnPlaceServiceInfo" buttonType="RAISED" layoutX="887.0" layoutY="592.8" onAction="#btnPlaceServiceInfoOnAction" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #34495e;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Place Service Info" textFill="#00ff5e" AnchorPane.topAnchor="590.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/use/icons8-check-mark-420.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tableordercart" layoutX="56.0" layoutY="402.0" prefHeight="172.0" prefWidth="1018.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="56.0">
+         <columns>
+            <TableColumn fx:id="colEmployeeID" prefWidth="148.8000030517578" text="Employee ID" />
+            <TableColumn fx:id="colServiceID" prefWidth="99.19998168945312" text="Service ID" />
+            <TableColumn fx:id="colHoursAllocated" minWidth="0.0" prefWidth="110.66658020019531" text="HoursAllocated" />
+            <TableColumn fx:id="colServiceDate" minWidth="0.0" prefWidth="126.40008544921875" text="ServiceDate" />
+            <TableColumn fx:id="colServiceprice" minWidth="0.0" prefWidth="177.33331298828125" text="Service Price " />
+            <TableColumn fx:id="colTotalServicePrice" minWidth="0.0" prefWidth="166.66668701171875" text="Total Service Price" />
+            <TableColumn fx:id="colAction" minWidth="0.0" prefWidth="185.00007324218745" text="Action" />
+         </columns>
+      </TableView>
+      <Label layoutX="34.0" layoutY="114.0" text="Employee Id :-" AnchorPane.leftAnchor="24.8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbEmployeeId" layoutX="145.0" layoutY="108.0" prefHeight="28.0" prefWidth="140.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="145.0" />
+      <Label fx:id="lableServiceName" layoutX="466.0" layoutY="168.0" textFill="#00a8ff">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="274.0" text="ServiceDate :-" AnchorPane.leftAnchor="24.8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="643.0" layoutY="166.0" text="Service Price :-">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lableServicePrice" layoutX="755.0" layoutY="168.0" textFill="#00a8ff">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="281.0" fitWidth="285.0" layoutX="852.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/employee.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="24.8" layoutY="65.0" text="Employee Phone :-" AnchorPane.leftAnchor="24.8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmployeephone" layoutX="168.0" layoutY="63.0" onKeyReleased="#TxtEmpPhoneOnKeyReleased" />
+      <Label layoutX="339.0" layoutY="115.0" text="Frist Name :-" AnchorPane.leftAnchor="345.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lableFristName" layoutX="435.0" layoutY="115.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="599.0" layoutY="116.0" text="Last Name :-">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lableLastName" layoutX="695.0" layoutY="116.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbServiceID" layoutX="119.0" layoutY="164.0" prefHeight="28.0" prefWidth="140.0" stylesheets="@../css/combobox.css" />
+      <Label fx:id="txtHoursAllocated" layoutX="25.0" layoutY="221.0" text="HoursAllocated :-" AnchorPane.leftAnchor="24.8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datepickerserviceDate" layoutX="131.0" layoutY="272.0" stylesheets="@../css/datepiker.css" />
+      <JFXTextField fx:id="txtHoursAlocated" layoutX="157.0" layoutY="219.0" onKeyReleased="#TxtHoursOnKeyReleased" prefHeight="26.0" prefWidth="102.0" />
+      <JFXButton buttonType="RAISED" layoutX="535.0" layoutY="590.0" onAction="#PrintBillOnAction" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #2f3542;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="  Print Bill" textFill="#07ff1b">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/forms/icons8-purchase-order.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

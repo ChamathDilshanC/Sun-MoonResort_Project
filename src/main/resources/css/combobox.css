@@ -1,0 +1,23 @@
+/* styles.css */
+
+.combo-box {
+    -fx-font-size: 12px;
+    -fx-border-color: #666;
+    -fx-border-radius: 5px;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #333;
+}
+
+.combo-box:hover {
+    -fx-border-color: #333;
+}
+
+.combo-box:focused {
+    -fx-border-color: #0096C9;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #666;
+}

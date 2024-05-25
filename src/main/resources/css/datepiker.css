@@ -1,0 +1,44 @@
+.date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+}
+
+.date-picker .month-year-pane {
+    -fx-background-color: #00a8ff;
+}
+
+.date-picker .month-year-pane .spinner-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.date-picker .month-year-pane .spinner-arrow-button {
+    -fx-background-color: #0055ff;
+    -fx-background-insets: 0;
+}
+
+.date-picker .month-year-pane .increment-arrow-button,
+.date-picker .month-year-pane .decrement-arrow-button {
+    -fx-background-color: #0055ff;
+}
+
+.date-picker .month-year-pane .increment-arrow,
+.date-picker .month-year-pane .decrement-arrow {
+    -fx-background-color: #666666; /* Arrow color */
+}
+
+.date-picker .day-cell {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.date-picker .day-cell:selected {
+    -fx-background-color: #3399ff; /* Highlight color for selected date */
+    -fx-text-fill: white;
+}
+
+
+.date-picker .day-cell:focused {
+    -fx-border-color: blue; /* Border color when a day cell is focused */
+}

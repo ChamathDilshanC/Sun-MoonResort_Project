@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardController">
+   <children>
+      <AnchorPane layoutX="15.2" layoutY="24.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="1099.0" stylesheets="@../css/anchorpane.css" AnchorPane.leftAnchor="15.2" AnchorPane.rightAnchor="15.200000000000045">
+         <children>
+            <HBox layoutX="20.8" layoutY="20.8" prefHeight="50.0" prefWidth="1035.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="163.0" text="Dashboard   |" textFill="#1923e1">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="86.0" text="Hello...">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="usernameLabel" prefHeight="35.0" prefWidth="396.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label layoutX="520.0" layoutY="77.0" prefHeight="46.0" prefWidth="232.0" text="Welcome back !!" textFill="#1923e1" AnchorPane.leftAnchor="172.0" AnchorPane.topAnchor="27.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLabel" layoutX="860.0" layoutY="30.0" prefHeight="31.0" prefWidth="85.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLabel" layoutX="986.0" layoutY="40.8" prefHeight="31.0" prefWidth="100.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="946.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="    |" AnchorPane.topAnchor="21.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+         <styleClass>
+            <String fx:value="rounded-anchor-pane3" />
+            <String fx:value="shadowed-element2" />
+         </styleClass>
+      </AnchorPane>
+      <BorderPane layoutX="15.2" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="1099.0" styleClass="rounded-anchor-pane3" stylesheets="@../css/anchorpane.css" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="235.0" stylesheets="@../css/anchorpane1.css">
+                     <children>
+                        <Label layoutX="22.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="170.0" text="Best Package" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+                           <font>
+                              <Font name="Roboto" size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="177.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/dashboard/bookings.png" />
+
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lablebestpackage" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Impact" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" right="30.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="gradient-button" />
+                        <String fx:value="shadowed-element2" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="235.0" stylesheets="@../css/anchorpane1.css">
+                     <children>
+                        <Label layoutX="22.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="170.0" text="Available Room" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+                           <font>
+                              <Font name="Roboto" size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="177.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/dashboard/rooms.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lableavaroom" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Impact" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="gradient-button1" />
+                        <String fx:value="shadowed-element2" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="235.0" stylesheets="@../css/anchorpane1.css">
+                     <children>
+                        <Label layoutX="22.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="170.0" text="Check In" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+                           <font>
+                              <Font name="Roboto" size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="177.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/dashboard/checin.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lablecheckin" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Impact" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="gradient-button2" />
+                        <String fx:value="shadowed-element2" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="235.0" stylesheets="@../css/anchorpane1.css">
+                     <children>
+                        <Label layoutX="22.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="170.0" text="Check Out" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+                           <font>
+                              <Font name="Roboto" size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="177.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/dashboard/checkout.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lablecheckout" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Impact" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="gradient-button3" />
+                        <String fx:value="shadowed-element2" />
+                     </styleClass>
+                  </AnchorPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="1079.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <ImageView fitHeight="195.0" fitWidth="265.0" layoutX="756.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashboard/2f5c8674-2c73-4126-887e-88d95e8e289a.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutY="228.0" prefHeight="114.0" prefWidth="1078.0">
+                     <children>
+                        <HBox layoutX="10.4" layoutY="8.2" prefHeight="100.0" prefWidth="1078.0" AnchorPane.bottomAnchor="6.200000000000003" AnchorPane.leftAnchor="10.4" AnchorPane.rightAnchor="10.400000000000091" AnchorPane.topAnchor="8.2">
+                           <children>
+                              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: #ffffff;" stylesheets="@../css/anchorpane1.css">
+                                 <styleClass>
+                                    <String fx:value="gradient-button4" />
+                                    <String fx:value="shadowed-element2" />
+                                 </styleClass>
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="60.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="29.200000000000003" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="195.81492691040037" AnchorPane.topAnchor="10.0">
+                                       <image>
+                                          <Image url="@../images/dashboard/reservations.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="141.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Reservations" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="18.734375">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="20.0" fitWidth="289.0" layoutX="1.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <image>
+                                          <Image url="@../images/dashboard/pres.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="lablereservation" layoutX="226.0" layoutY="62.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="43.0">
+                                       <font>
+                                          <Font name="Impact" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="70.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: #ffffff;" stylesheets="@../css/anchorpane1.css">
+                                 <styleClass>
+                                    <String fx:value="gradient-button4" />
+                                    <String fx:value="shadowed-element2" />
+                                 </styleClass>
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="60.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="29.200000000000003" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="195.81492691040037" AnchorPane.topAnchor="10.0">
+                                       <image>
+                                          <Image url="@../images/dashboard/customers.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="141.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Customers" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="18.734375">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="18.0" fitWidth="258.0" layoutX="22.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard/pcust.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="lablecustomers" layoutX="226.0" layoutY="53.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="43.0">
+                                       <font>
+                                          <Font name="Impact" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="70.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: #ffffff;" stylesheets="@../css/anchorpane1.css">
+                                 <styleClass>
+                                    <String fx:value="gradient-button4" />
+                                    <String fx:value="shadowed-element2" />
+                                 </styleClass>
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="60.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="29.200000000000003" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="195.81492691040037" AnchorPane.topAnchor="10.0">
+                                       <image>
+                                          <Image url="@../images/dashboard/revenue.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="141.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Revenue" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="18.734375">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="16.0" fitWidth="281.0" layoutX="24.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="10.0">
+                                       <image>
+                                          <Image url="@../images/dashboard/prev.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="lablerevenue" layoutX="227.0" layoutY="54.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="43.0">
+                                       <font>
+                                          <Font name="Impact" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="282.0" fitWidth="418.0" layoutX="23.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashboard/chart.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="203.0" fitWidth="266.0" layoutX="494.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashboard/piechart.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

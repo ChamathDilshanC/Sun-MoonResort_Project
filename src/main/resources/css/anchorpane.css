@@ -1,0 +1,50 @@
+.rounded-anchor-pane {
+    -fx-background-color:white; /* Gradient from blue to dark grey */
+    -fx-background-radius: 10; /* Rounded corners */
+    -fx-padding: 10; /* Padding inside the AnchorPane */
+    -fx-border-color: #1e272e; /* Border color */
+    -fx-border-radius: 10; /* Border radius to match background */
+    -fx-border-width: 1; /* Border width */
+}
+.rounded-anchor-pane1 {
+    -fx-background-color: linear-gradient(to bottom, #c33764, #1d2671); /* Gradient from blue to dark grey */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-padding: 10; /* Padding inside the AnchorPane *
+    -fx-border-width: 1; /* Border width */
+}
+.rounded-anchor-pane2 {
+    -fx-background-color: linear-gradient(to bottom, #506dea, #a83de8); /* Gradient background */
+    -fx-padding: 10; /* Padding inside the AnchorPane */
+}
+
+.rounded-anchor-pane3 {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient background */
+    -fx-background-radius: 15px; /* Rounded corners */
+    -fx-padding: 10;
+}
+
+.rounded-anchor-pane4 {
+    -fx-background-color:#f0f3fb; /* Gradient background */
+    -fx-padding: 10; /* Padding inside the AnchorPane */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-padding: 10; /* Padding inside the AnchorPane *
+    -fx-border-width: 1; /* Border width */
+}
+
+.circular-anchor-pane {
+    -fx-background-radius: 50%;
+    -fx-background-color: linear-gradient(to bottom, #506dea, #a83de8); /* Gradient background */
+}
+.rounded-anchor-pane5 {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #00a8ff); /* Gradient background */
+    -fx-background-radius: 0 0 15px 15px; /* Rounded corners only at the bottom */
+    -fx-padding: 10;
+}
+
+
+.shadowed-element1 {
+    -fx-fill: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.shadowed-element2 {
+    -fx-effect: dropshadow(gaussian, rgba(136, 165, 191, 0.48), 16, 0.0, 0, 0);
+}

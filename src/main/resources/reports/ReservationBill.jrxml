@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReservationBill" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1999f4a7-8bdc-45b3-92f3-89b046c567d3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="126"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="869"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (10)"/>
+	<parameter name="ReservationID" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    *
+FROM
+    sm_resort.reservation r
+LEFT JOIN
+    sm_resort.payment p ON r.ReservationID = p.ReservationID
+LEFT JOIN
+    sm_resort.reservation_package_info pi ON r.ReservationID = pi.ReservationID
+LEFT JOIN
+    sm_resort.reservation_room_info ri ON r.ReservationID = ri.ReservationID
+WHERE
+    r.ReservationID =  $P{ReservationID}]]>
+	</queryString>
+	<field name="ReservationID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ReservationID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ReservationID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="CheckInDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="CheckInDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="CheckInDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="CheckOutDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="CheckOutDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="CheckOutDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="ReservationDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="ReservationDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="ReservationDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="Duration" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Duration"/>
+		<property name="com.jaspersoft.studio.field.label" value="Duration"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="NumberofGuests" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="NumberofGuests"/>
+		<property name="com.jaspersoft.studio.field.label" value="NumberofGuests"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="Status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Status"/>
+		<property name="com.jaspersoft.studio.field.label" value="Status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="PaymentID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PaymentID"/>
+		<property name="com.jaspersoft.studio.field.label" value="PaymentID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="COLUMN_9" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ReservationID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ReservationID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="Amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="Date"/>
+		<property name="com.jaspersoft.studio.field.label" value="Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="Method" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Method"/>
+		<property name="com.jaspersoft.studio.field.label" value="Method"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="COLUMN_13" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Status"/>
+		<property name="com.jaspersoft.studio.field.label" value="Status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="COLUMN_14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ReservationID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ReservationID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation_package_info"/>
+	</field>
+	<field name="PackageID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PackageID"/>
+		<property name="com.jaspersoft.studio.field.label" value="PackageID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation_package_info"/>
+	</field>
+	<field name="CustomerID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CustomerID"/>
+		<property name="com.jaspersoft.studio.field.label" value="CustomerID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation_package_info"/>
+	</field>
+	<field name="COLUMN_17" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ReservationID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ReservationID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation_room_info"/>
+	</field>
+	<field name="RoomID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="RoomID"/>
+		<property name="com.jaspersoft.studio.field.label" value="RoomID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation_room_info"/>
+	</field>
+	<group name="ReservationID">
+		<groupExpression><![CDATA[$F{ReservationID}]]></groupExpression>
+	</group>
+	<group name="CheckInDate">
+		<groupExpression><![CDATA[$F{CheckInDate}]]></groupExpression>
+	</group>
+	<group name="CheckOutDate">
+		<groupExpression><![CDATA[$F{CheckOutDate}]]></groupExpression>
+	</group>
+	<group name="ReservationDate">
+		<groupExpression><![CDATA[$F{ReservationDate}]]></groupExpression>
+	</group>
+	<group name="Duration">
+		<groupExpression><![CDATA[$F{Duration}]]></groupExpression>
+	</group>
+	<group name="NumberofGuests">
+		<groupExpression><![CDATA[$F{NumberofGuests}]]></groupExpression>
+	</group>
+	<group name="Status">
+		<groupExpression><![CDATA[$F{Status}]]></groupExpression>
+	</group>
+	<group name="PaymentID">
+		<groupExpression><![CDATA[$F{PaymentID}]]></groupExpression>
+	</group>
+	<group name="COLUMN_9">
+		<groupExpression><![CDATA[$F{COLUMN_9}]]></groupExpression>
+	</group>
+	<group name="Amount">
+		<groupExpression><![CDATA[$F{Amount}]]></groupExpression>
+	</group>
+	<group name="Date">
+		<groupExpression><![CDATA[$F{Date}]]></groupExpression>
+	</group>
+	<group name="Method">
+		<groupExpression><![CDATA[$F{Method}]]></groupExpression>
+	</group>
+	<group name="COLUMN_13">
+		<groupExpression><![CDATA[$F{COLUMN_13}]]></groupExpression>
+	</group>
+	<group name="COLUMN_14">
+		<groupExpression><![CDATA[$F{COLUMN_14}]]></groupExpression>
+	</group>
+	<group name="PackageID">
+		<groupExpression><![CDATA[$F{PackageID}]]></groupExpression>
+	</group>
+	<group name="CustomerID">
+		<groupExpression><![CDATA[$F{CustomerID}]]></groupExpression>
+	</group>
+	<group name="COLUMN_17">
+		<groupExpression><![CDATA[$F{COLUMN_17}]]></groupExpression>
+	</group>
+	<group name="RoomID">
+		<groupExpression><![CDATA[$F{RoomID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<image>
+				<reportElement x="30" y="0" width="50" height="50" uuid="3069a298-e537-4c3a-8b50-e6c95956c4f2"/>
+				<imageExpression><![CDATA["C:/Users/dilsh/Desktop/SUN & MOON RESORT PROJECT/S_Moon_Resort1/src/main/resources/images/login/299486158_509594274305999_6293275334226673541_n__1_-removebg-preview.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="184" y="0" width="187" height="47" forecolor="#2F18C7" uuid="2a86ddbe-55ef-4513-a2e5-05a495694adc"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Sun & Moon Resort ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="30" width="330" height="30" uuid="967e94ab-9315-4140-a5a0-d857076dc639"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[104/8 Galle Rd,Kaluwamodara,Aluthgama,Srilanka.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="60" width="100" height="30" uuid="ee7e54cf-a4b5-4e16-aa92-76ee3850098b"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[070 274 7123]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="110" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="20" width="100" height="30" uuid="e5ee90d8-7a65-44b6-8c42-e490443d185d"/>
+				<textFieldExpression><![CDATA[$F{ReservationID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="30" forecolor="#2F18C7" uuid="9db0a9f6-f20c-4b1e-8a58-b12438941a90"/>
+				<text><![CDATA[Reservation ID :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="20" width="100" height="30" uuid="1d1e171a-905b-4b2f-9c25-70693576fac5"/>
+				<textFieldExpression><![CDATA[$F{CheckInDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="20" width="100" height="30" forecolor="#2F18C7" uuid="35671099-081e-4243-b182-3598703675ef"/>
+				<text><![CDATA[CheckinDate :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="456" y="50" width="100" height="30" uuid="40d8746b-135b-4f1e-ace2-d800abd4db50"/>
+				<textFieldExpression><![CDATA[$F{CheckOutDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="50" width="100" height="30" forecolor="#2F18C7" uuid="2dfd2b68-3270-40ec-8c20-fc58d02634f1"/>
+				<text><![CDATA[CheckOutDate :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="50" width="100" height="30" uuid="2b21568d-a7af-44f8-8aff-6d3d9fbe9686"/>
+				<textFieldExpression><![CDATA[$F{ReservationDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="100" height="30" forecolor="#2F18C7" uuid="26e027cd-bb1f-4768-9194-3ebc62bb4adf"/>
+				<text><![CDATA[Reservation Date :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="80" width="100" height="30" uuid="747759ca-2844-4b6a-aedd-a2e78413e467"/>
+				<textFieldExpression><![CDATA[$F{CustomerID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="80" width="100" height="30" forecolor="#2F18C7" uuid="30cd0e48-4048-4597-8e04-4e021172cb96"/>
+				<text><![CDATA[Customer ID :-]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="120" splitType="Stretch">
+			<textField>
+				<reportElement x="280" y="20" width="100" height="20" forecolor="#000003" uuid="888ed646-e7a5-4472-9c13-61909d714124"/>
+				<textFieldExpression><![CDATA[$F{PaymentID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="184" y="20" width="96" height="20" forecolor="#2F18C7" uuid="bd024599-f987-4747-8589-e224bc89a099"/>
+				<text><![CDATA[Payment ID :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="50" width="100" height="30" uuid="20da9c08-7ea9-428d-a84c-7b7c39a2defb"/>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="50" width="100" height="30" forecolor="#2F18C7" uuid="01fdc12b-9e88-4df2-a42f-97b311c92a0a"/>
+				<text><![CDATA[Total Payment :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="90" width="100" height="30" uuid="87b09e97-569e-41d7-bf2c-a600f89138da">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3803ca29-8e74-497c-8cbc-304f8017faf4"/>
+				</reportElement>
+				<text><![CDATA[RoomID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="90" width="100" height="30" uuid="43b43dfe-9cac-4db6-94ff-c2b0155632d9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0acdd89-db3b-4cd1-9a10-c4af2b85bcf7"/>
+				</reportElement>
+				<text><![CDATA[PackageID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="0" width="100" height="30" uuid="9414a652-05c2-45bb-ab1f-2a1b67961c35">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0acdd89-db3b-4cd1-9a10-c4af2b85bcf7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PackageID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="afb94fde-1ebe-4d5e-a2ea-621f938b7e2f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3803ca29-8e74-497c-8cbc-304f8017faf4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{RoomID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="192" y="0" width="170" height="30" uuid="a85005dd-655a-47c0-9ba7-82f363c470ba"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[THANK YOU FOR CHOOSING US !!!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="30" width="78" height="30" forecolor="#2F18C7" uuid="d9f5919f-b8b8-4e99-8049-4e411455441b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[VISIT AGAIN... ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="47" width="510" height="30" uuid="098dceea-863f-4196-bd7e-88125423bb7e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Facing the Bentota river and walking distance to the beach. A 60-minute drive from Colombo. Packed with excitement and comfort. Quality, Reliability, and Luxury are our main priorities.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="49" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="672.0" prefWidth="1129.0" stylesheets="@../css/anchorpane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeFormController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Employee   Form" textFill="#1923e1" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="24.0">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="hireDatePicker" layoutX="469.0" layoutY="293.0" prefHeight="28.0" prefWidth="238.0" stylesheets="@../css/datepiker.css" AnchorPane.leftAnchor="442.0" AnchorPane.topAnchor="293.0" />
+      <Label layoutX="469.0" layoutY="247.0" text="Hire Date :-" AnchorPane.leftAnchor="442.0" AnchorPane.topAnchor="270.0" />
+      <ImageView fitHeight="232.0" fitWidth="227.0" layoutX="738.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/fbb8ef7f-f373-449a-91fb-14514e5af6cd.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="238.0" fitWidth="389.0" layoutX="718.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/new/3d-portrait-business-people.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cmbDepartment" layoutX="474.0" layoutY="460.0" onAction="#cmbDepartmentOnAction" prefHeight="26.0" prefWidth="238.0" stylesheets="@../css/combobox.css" AnchorPane.leftAnchor="442.0" AnchorPane.topAnchor="430.0" />
+      <Label layoutX="465.59999999999997" layoutY="416.0" text="Department :-" AnchorPane.leftAnchor="442.0" />
+      <HBox layoutX="243.0" layoutY="608.0" prefHeight="54.0" prefWidth="658.0" AnchorPane.leftAnchor="233.0" AnchorPane.topAnchor="593.0">
+         <children>
+            <JFXButton fx:id="btnsave" onAction="#btnsaveOnAction" prefHeight="31.0" prefWidth="101.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Save">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnupdate" onAction="#btnupdateOnAction" prefHeight="31.0" prefWidth="102.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Update">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btndelete" onAction="#btndeleteOnAction" prefHeight="31.0" prefWidth="102.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Delete">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnclear" onAction="#btnclearOnAction" prefHeight="31.0" prefWidth="102.0" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Clear">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnemployeetable" onAction="#btnEmployeeTableOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #7d5fff;" styleClass="button-63" stylesheets="@../css/button1.1.css" text="Employee Table">
+               <HBox.margin>
+                  <Insets left="30.0" right="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXTextField fx:id="txtEmployeeID" focusColor="#3742fa" labelFloat="true" layoutX="56.0" layoutY="190.0" onKeyReleased="#txtEmpIdOnKeyReleased" prefHeight="38.0" prefWidth="238.0" promptText="EmployeeID" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="190.0" />
+      <JFXTextField fx:id="txtFirstName" focusColor="#3742fa" labelFloat="true" layoutX="56.0" layoutY="270.0" onKeyReleased="#txtUserFristNameOnKeyReleased" prefHeight="38.0" prefWidth="238.0" promptText="FirstName" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="270.0" />
+      <JFXTextField fx:id="txtLastName" focusColor="#3742fa" labelFloat="true" layoutX="56.0" layoutY="350.0" onKeyReleased="#txtUserLastNameOnKeyReleased" prefHeight="38.0" prefWidth="238.0" promptText="LastName" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="350.0" />
+      <JFXTextField fx:id="txtPosition" focusColor="#3742fa" labelFloat="true" layoutX="56.0" layoutY="430.0" onKeyReleased="#txtPositionOnKeyReleased" prefHeight="38.0" prefWidth="238.0" promptText="Position" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="430.0" />
+      <JFXTextField fx:id="txtEmail" focusColor="#3742fa" labelFloat="true" layoutX="56.0" layoutY="510.0" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="38.0" prefWidth="238.0" promptText="Email" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="510.0" />
+      <JFXTextField fx:id="txtPhonesearch" focusColor="#3742fa" labelFloat="true" layoutX="67.0" layoutY="118.0" onKeyReleased="#txtSearchPhoneOnKeyReleased" prefHeight="38.0" prefWidth="238.0" promptText="Search By Phone" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="118.0" />
+      <JFXTextField fx:id="txtSalary" focusColor="#3742fa" labelFloat="true" layoutX="469.0" layoutY="344.0" onKeyReleased="#txtSalaryOnKeyReleased" prefHeight="38.0" prefWidth="238.0" promptText="Salary" AnchorPane.leftAnchor="442.0" AnchorPane.topAnchor="350.0" />
+      <JFXTextField fx:id="txtPhone" focusColor="#3742fa" labelFloat="true" layoutX="465.0" layoutY="187.0" onKeyReleased="#txtPhoneOnKeyReleased" prefHeight="38.0" prefWidth="238.0" promptText="Phone" AnchorPane.leftAnchor="442.0" AnchorPane.topAnchor="190.0" />
+      <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="31.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/forms/icons8-search-1--unscreen.gif" />
+         </image>
+      </ImageView>
+   </children>
+   <styleClass>
+      <String fx:value="rounded-anchor-pane4" />
+      <String fx:value="shadowed-element1" />
+   </styleClass>
+</AnchorPane>
