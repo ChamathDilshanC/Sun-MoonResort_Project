@@ -70,7 +70,7 @@ public class ReservationFormController {
     private TableColumn<ReservationCartItem, String> colCustomerId;
     @FXML
     private TableColumn<ReservationCartItem, Void> colAction;
-    private AnchorPane FormAnchorpane;
+
 
     public void initialize() throws SQLException {
         txtCustomerphone.requestFocus();
@@ -669,7 +669,7 @@ public class ReservationFormController {
     }
 
     public void PrintBillOnAction(ActionEvent actionEvent) throws SQLException, JRException {
-        JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/reports/ReservationBill.jrxml");
+        JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/Report/Reservationbills.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
 
         Map<String, Object> data = new HashMap<>();

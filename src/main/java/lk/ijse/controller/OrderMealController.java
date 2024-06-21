@@ -310,7 +310,7 @@ public class OrderMealController {
 
 
     public void PrintBillOnAction(ActionEvent actionEvent) throws JRException, SQLException {
-        JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/reports/OrderMeal.jrxml");
+        JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/Report/OrderMeal.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
 
         Map<String, Object> data = new HashMap<>();

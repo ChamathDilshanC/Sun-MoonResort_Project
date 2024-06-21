@@ -356,7 +356,7 @@ public class InventoryFormController {
     }
 
     public void PrintBillOnAction(ActionEvent actionEvent) throws JRException, SQLException {
-        JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/reports/SupplyReport.jrxml");
+        JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/Report/SupplyReport.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
 
         Map<String, Object> data = new HashMap<>();

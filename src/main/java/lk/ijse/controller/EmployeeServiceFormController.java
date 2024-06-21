@@ -265,7 +265,8 @@ public class EmployeeServiceFormController {
         try {
             Service service = EmployeeServiceRepo.getServiceById(serviceId);
             if (service != null) {
-                lableServiceName.setText(service.getName());
+                lableServiceName.setText(service.getServiceID());
+                System.out.println(service.getName());
                 lableServicePrice.setText(String.format("%.2f", service.getPrice()));
             }
         } catch (SQLException e) {
@@ -404,7 +405,7 @@ public class EmployeeServiceFormController {
     }
 
     public void PrintBillOnAction(ActionEvent actionEvent) throws JRException, SQLException {
-        JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/reports/EmployeeService.jrxml");
+        JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/Report/EmployeeServices.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
 
         Map<String, Object> data = new HashMap<>();

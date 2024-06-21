@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SupplyReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f1f8895-998b-4d31-a905-b3829c820ec0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (12)"/>
+	<parameter name="SupplierID" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+*
+FROM
+    sm_resort.Supplier s
+JOIN
+    sm_resort.Inventory_supplier_info isi ON s.SupplierID = isi.SupplierID
+JOIN
+    sm_resort.Inventory i ON isi.InventoryID = i.InventoryID
+WHERE
+    s.SupplierID = $P{SupplierID};]]>
+	</queryString>
+	<field name="SupplierID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SupplierID"/>
+		<property name="com.jaspersoft.studio.field.label" value="SupplierID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplier"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplier"/>
+	</field>
+	<field name="PostalCode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PostalCode"/>
+		<property name="com.jaspersoft.studio.field.label" value="PostalCode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplier"/>
+	</field>
+	<field name="EmailAddress" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EmailAddress"/>
+		<property name="com.jaspersoft.studio.field.label" value="EmailAddress"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplier"/>
+	</field>
+	<field name="ContactNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ContactNumber"/>
+		<property name="com.jaspersoft.studio.field.label" value="ContactNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplier"/>
+	</field>
+	<field name="InventoryID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="InventoryID"/>
+		<property name="com.jaspersoft.studio.field.label" value="InventoryID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory_supplier_info"/>
+	</field>
+	<field name="COLUMN_7" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SupplierID"/>
+		<property name="com.jaspersoft.studio.field.label" value="SupplierID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory_supplier_info"/>
+	</field>
+	<field name="SupplyQuantity" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="SupplyQuantity"/>
+		<property name="com.jaspersoft.studio.field.label" value="SupplyQuantity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory_supplier_info"/>
+	</field>
+	<field name="DeliveryDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="DeliveryDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="DeliveryDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory_supplier_info"/>
+	</field>
+	<field name="PricePerUnit" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PricePerUnit"/>
+		<property name="com.jaspersoft.studio.field.label" value="PricePerUnit"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory_supplier_info"/>
+	</field>
+	<field name="TotalPrice" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TotalPrice"/>
+		<property name="com.jaspersoft.studio.field.label" value="TotalPrice"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory_supplier_info"/>
+	</field>
+	<field name="COLUMN_12" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="InventoryID"/>
+		<property name="com.jaspersoft.studio.field.label" value="InventoryID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory"/>
+	</field>
+	<field name="MealID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MealID"/>
+		<property name="com.jaspersoft.studio.field.label" value="MealID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory"/>
+	</field>
+	<field name="COLUMN_14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory"/>
+	</field>
+	<field name="Quantity" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Quantity"/>
+		<property name="com.jaspersoft.studio.field.label" value="Quantity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory"/>
+	</field>
+	<field name="MinimumStockLevel" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="MinimumStockLevel"/>
+		<property name="com.jaspersoft.studio.field.label" value="MinimumStockLevel"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory"/>
+	</field>
+	<field name="Ingredients" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Ingredients"/>
+		<property name="com.jaspersoft.studio.field.label" value="Ingredients"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="inventory"/>
+	</field>
+	<group name="SupplierID">
+		<groupExpression><![CDATA[$F{SupplierID}]]></groupExpression>
+	</group>
+	<group name="Name">
+		<groupExpression><![CDATA[$F{Name}]]></groupExpression>
+	</group>
+	<group name="PostalCode">
+		<groupExpression><![CDATA[$F{PostalCode}]]></groupExpression>
+	</group>
+	<group name="EmailAddress">
+		<groupExpression><![CDATA[$F{EmailAddress}]]></groupExpression>
+	</group>
+	<group name="ContactNumber">
+		<groupExpression><![CDATA[$F{ContactNumber}]]></groupExpression>
+	</group>
+	<group name="InventoryID">
+		<groupExpression><![CDATA[$F{InventoryID}]]></groupExpression>
+	</group>
+	<group name="COLUMN_7">
+		<groupExpression><![CDATA[$F{COLUMN_7}]]></groupExpression>
+	</group>
+	<group name="SupplyQuantity">
+		<groupExpression><![CDATA[$F{SupplyQuantity}]]></groupExpression>
+	</group>
+	<group name="DeliveryDate">
+		<groupExpression><![CDATA[$F{DeliveryDate}]]></groupExpression>
+	</group>
+	<group name="PricePerUnit">
+		<groupExpression><![CDATA[$F{PricePerUnit}]]></groupExpression>
+	</group>
+	<group name="TotalPrice">
+		<groupExpression><![CDATA[$F{TotalPrice}]]></groupExpression>
+	</group>
+	<group name="COLUMN_12">
+		<groupExpression><![CDATA[$F{COLUMN_12}]]></groupExpression>
+	</group>
+	<group name="MealID">
+		<groupExpression><![CDATA[$F{MealID}]]></groupExpression>
+	</group>
+	<group name="COLUMN_14">
+		<groupExpression><![CDATA[$F{COLUMN_14}]]></groupExpression>
+	</group>
+	<group name="Quantity">
+		<groupExpression><![CDATA[$F{Quantity}]]></groupExpression>
+	</group>
+	<group name="MinimumStockLevel">
+		<groupExpression><![CDATA[$F{MinimumStockLevel}]]></groupExpression>
+	</group>
+	<group name="Ingredients">
+		<groupExpression><![CDATA[$F{Ingredients}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="184" y="0" width="187" height="47" forecolor="#2F18C7" uuid="580d579f-b9b8-44fd-ad18-b339f39890ed"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Sun & Moon Resort ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="30" width="330" height="30" uuid="e914cb5e-5c94-4530-9de5-6ef0374fbb55"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[104/8 Galle Rd,Kaluwamodara,Aluthgama,Srilanka.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="60" width="100" height="30" uuid="90d4e6a7-5f5c-4cca-9d6d-7a42d424768c"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[070 274 7123]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="69" height="15" uuid="3bf854f3-bda6-4826-967b-75e791ba704b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="165ebe89-b3af-4ff8-978c-b3173831cc48"/>
+				</reportElement>
+				<text><![CDATA[SupplierID :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="69" y="21" width="81" height="15" uuid="3105310c-1d31-4aa4-9795-cfd5f4d04f82">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="165ebe89-b3af-4ff8-978c-b3173831cc48"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{SupplierID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="21" width="70" height="15" uuid="f9263028-3708-4c60-9a5e-28e90eebf030">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a59c86e-1aa3-4734-9ff9-005899662fcd"/>
+				</reportElement>
+				<text><![CDATA[PostalCode :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="21" width="100" height="15" uuid="78982a88-f262-45ff-ab34-51f381d6277b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a59c86e-1aa3-4734-9ff9-005899662fcd"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PostalCode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="69" height="19" uuid="d83cf90c-4e03-43a2-a619-5c748f00c7e6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30f8d29f-b3bd-4d76-b4d3-413b54972fc4"/>
+				</reportElement>
+				<text><![CDATA[Name :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="69" y="1" width="81" height="19" uuid="b3d85e8f-cff8-4f87-a602-07e1ae288986">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30f8d29f-b3bd-4d76-b4d3-413b54972fc4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="2" width="70" height="20" uuid="42610da5-428c-4cee-9b2d-6aa3c0d68181">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c469e1b-0f4e-4f07-9b3e-cf59aed9283f"/>
+				</reportElement>
+				<text><![CDATA[EmailAddress :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="353" y="1" width="100" height="21" uuid="ef7ea0ba-b860-49c5-9eab-8e212837f704">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c469e1b-0f4e-4f07-9b3e-cf59aed9283f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{EmailAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="80" height="20" uuid="3362025d-e918-419f-a344-fb39a1c456e6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd8008fa-4e83-4fbb-98ac-70bd05ae0c1d"/>
+				</reportElement>
+				<text><![CDATA[ContactNumber :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="20" width="100" height="20" uuid="98db5107-f0cb-45c0-9720-62c5ac219c6e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd8008fa-4e83-4fbb-98ac-70bd05ae0c1d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ContactNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="30" uuid="7ccb8d03-dc7e-471b-84ce-cb510facc735">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b96449-bed7-4fbc-b61d-f0ac3c860933"/>
+				</reportElement>
+				<text><![CDATA[InventoryID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="60" width="100" height="30" uuid="f39cf578-ab08-4a46-aa95-aebed7849edf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="768a092e-9743-4627-926d-56cebc90a519"/>
+				</reportElement>
+				<text><![CDATA[SupplyQuantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="60" width="100" height="30" uuid="2df23528-ee1f-43a4-9894-4907ac4ff3ed">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a02dcd1-8edd-46e5-bc19-13071a44206b"/>
+				</reportElement>
+				<text><![CDATA[PricePerUnit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="60" width="100" height="30" uuid="11d5a588-a2fa-40a8-b444-c5ed9bbd0051">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9060350e-fa6f-4f42-bb7c-8808997bfe45"/>
+				</reportElement>
+				<text><![CDATA[TotalPrice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="60" width="100" height="30" uuid="247731e2-3c1d-4eee-b94d-5bc9c0f6e628">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0d16c9d2-c053-45db-8865-117773e59b7c"/>
+				</reportElement>
+				<text><![CDATA[MealID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="13a2ccc4-d619-44cb-aeb5-25b1a323802a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b96449-bed7-4fbc-b61d-f0ac3c860933"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{InventoryID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="0" width="100" height="30" uuid="081b7fb5-942d-4c7a-b3c0-8f86372ebafb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="768a092e-9743-4627-926d-56cebc90a519"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{SupplyQuantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="100" height="30" uuid="eff74fd9-e8e9-4054-b301-ed4570fee80e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a02dcd1-8edd-46e5-bc19-13071a44206b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PricePerUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="0" width="100" height="30" uuid="b5b7c84f-c107-45de-bccf-ac95c2d4c32b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9060350e-fa6f-4f42-bb7c-8808997bfe45"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{TotalPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="100" height="30" uuid="25f97217-d05a-474a-bfb6-3b053e500415">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0d16c9d2-c053-45db-8865-117773e59b7c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{MealID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="280" y="0" width="100" height="30" uuid="82108dc7-3c99-48e5-861c-3aa378bcaee0"/>
+				<textFieldExpression><![CDATA[$F{DeliveryDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="30" uuid="92f49152-612e-43f3-b085-10a29c1dc0e2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b96449-bed7-4fbc-b61d-f0ac3c860933"/>
+				</reportElement>
+				<text><![CDATA[Delivery Date :-]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement x="192" y="0" width="170" height="30" uuid="0a77ce42-656e-463a-bf9e-88d0f1b39994"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[THANK YOU FOR  SERVICE !!!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="30" width="78" height="30" forecolor="#2F18C7" uuid="52c030ce-2c91-48a2-a784-b3ab4cdc24b2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[STAY HAPPY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="47" width="510" height="30" uuid="b0b06620-7253-41d9-902f-2a49c0bb9588"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Facing the Bentota river and walking distance to the beach. A 60-minute drive from Colombo. Packed with excitement and comfort. Quality, Reliability, and Luxury are our main priorities.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
