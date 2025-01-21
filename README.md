@@ -31,9 +31,6 @@ To get a local copy up and running, follow these simple steps:
    ```
 3. Open `index.html` in your browser
 
-## 🎨 Preview
-
-[Consider adding a GIF or screenshot of your project here]
 
 ## 🤝 Contributing
 
